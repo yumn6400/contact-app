@@ -9,7 +9,9 @@ const requestListener = (req, res) => {
   console.log(parsedUrl)
   const path = parsedUrl.pathname;
   const method = req.method;
-
+  if (path === '/' && method === 'GET') {
+    console.log("Welcome to contact application")
+  }
   if (path === '/register' && method === 'POST') {
     userController.register(req, res);
   } else if (path === '/login' && method === 'POST') {
