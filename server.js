@@ -10,9 +10,9 @@ const requestListener = (req, res) => {
   const path = parsedUrl.pathname;
   const method = req.method;
   if (path === '/' && method === 'GET') {
-    console.log("Welcome to contact application")
-  }
-  if (path === '/register' && method === 'POST') {
+     res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Welcome to contact application');
+  }else if (path === '/register' && method === 'POST') {
     userController.register(req, res);
   } else if (path === '/login' && method === 'POST') {
     userController.login(req, res);
