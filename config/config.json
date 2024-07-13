@@ -14,16 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
-   "username": "pradhyumn",
-    "password": "pradhyumn",
-    "database": "contactDB",
-    "host": "localhost",
-    "dialect": "mysql",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
