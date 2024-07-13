@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 const { sequelize } = require('./models');
-const userController = require('./controllers/userController');
+const userController = require('./controllers/UserController');
 const contactController = require('./controllers/contactController');
 
 const requestListener = (req, res) => {
